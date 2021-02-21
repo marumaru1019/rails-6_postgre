@@ -21,7 +21,19 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+# テスト用
+gem 'capybara', '>= 3.26'
 gem 'rspec-rails'
+gem 'factory_bot_rails'
+gem 'faker'
+
+# 画像投稿用
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
+
+# デバッグ用
+gem 'pry-byebug'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

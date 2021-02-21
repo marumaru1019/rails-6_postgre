@@ -1,0 +1,13 @@
+<h1>投稿一覧</h1>
+<% @all_list.each do |list| %>
+  <p>タイトル</p>
+  <span><%= link_to list.title, "/todo/#{list.id}" %></span>
+  <span><%= list.body %></span>
+
+  <!-- 画像表示 -->
+  <p>画像</p>
+  <%= attachment_image_tag list, :image, :fill, 100, 100, format: 'jpeg' %>
+
+<% end %>
+
+<%= link_to "登録画面へ", "/todo/new" %>

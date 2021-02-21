@@ -62,7 +62,7 @@ development:
 test:
   <<: *default
   database: app_test
-  username: root
+  username: <%= ENV['POSTGRES_USER'] || 'postgres' %>
   host: <%= ENV['DB_HOST'] || 'db' %>
   password: <%= ENV['DB_PASSWORD'] || '12345678' %>
 
