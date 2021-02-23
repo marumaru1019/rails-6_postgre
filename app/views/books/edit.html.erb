@@ -1,0 +1,20 @@
+<div class="success">
+    <%= notice %>
+</div>
+<div class="fail">
+    <%= alert %>
+</div>
+<h1>Editing Book</h1>
+
+<%= render 'shared/book_error' %>
+
+<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+    <h4>タイトル</h4>
+    <%= f.text_field :title, value: @book.title%>
+        <h4>本文</h4>
+        <%= f.text_area :body %>
+    <input type="submit" class="booker__submit" name="commit" value="Update Book" data-disable-with="Updata Book">
+<% end %>
+
+<%= link_to "Show", book_path(@book.id) %> |
+<%= link_to "Back" , "/books" %>

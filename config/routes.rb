@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  root  'hello#index'  #この1行を追加
+  root  'books#books'  #この1行を追加
+
+  get "/", to: "books#books"
+  get "books", to: "books#index"
+  post "books", to: "books#create"
+  get "books/:id", to: "books#show", as: "book"
+  get "books/:id/edit", to: "books#edit", as: "edit_book"
+  patch "books/:id", to: "books#update"
+  delete "books/:id", to: "books#destroy", as: "destroy_book"
 
   get 'todo/new', to: "todolists#new"
   post "todo/create", to: "todolists#create"

@@ -3,7 +3,7 @@
   <h4>タイトル</h4>
   <%= f.text_field :title %>
   <h4>本文</h4>
-  <textarea name="body" cols="30" rows="10"></textarea>
+  <%= f.text_area :body %>
   <%= f.submit '保存' %>
 <% end %>
 

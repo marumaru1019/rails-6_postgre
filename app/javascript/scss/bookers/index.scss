@@ -1,0 +1,23 @@
+.booker{
+    width:80%;
+
+    &__col{
+        text-align:center;
+    }
+
+    &__crud{
+        padding: 0 5px;
+    }
+
+    &__submit{
+        display: block;
+    }
+}
+
+.success{
+    color: green;
+}
+
+.fail{
+    color: red;
+}

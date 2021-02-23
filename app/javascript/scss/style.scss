@@ -7,4 +7,9 @@
 @import "base/status";
 @import "base/base";
 
-@import "mixin/mixin"
+@import "mixin/mixin";
+
+// 各component
+@import "bookers/top";
+@import "bookers/index";
+@import "bookers/edit";
